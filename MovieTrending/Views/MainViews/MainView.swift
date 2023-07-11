@@ -9,6 +9,7 @@ import UIKit
 
 final class MainView: UIView {
   @IBOutlet weak var contentView: UIView!
+  @IBOutlet weak var tableView: UITableView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)
