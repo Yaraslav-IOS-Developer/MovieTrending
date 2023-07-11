@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C444311F2A5D574200625723 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444311E2A5D574200625723 /* MainViewModel.swift */; };
 		C46B88302A5C70F600F3F3DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B882F2A5C70F600F3F3DE /* AppDelegate.swift */; };
 		C46B88392A5C70F800F3F3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46B88382A5C70F800F3F3DE /* Assets.xcassets */; };
 		C46B883C2A5C70F800F3F3DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46B883A2A5C70F800F3F3DE /* LaunchScreen.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C444311E2A5D574200625723 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C46B882C2A5C70F600F3F3DE /* MovieTrending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTrending.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46B882F2A5C70F600F3F3DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46B88382A5C70F800F3F3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C444311C2A5D571A00625723 /* MainViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C444311E2A5D574200625723 /* MainViewModel.swift */,
+			);
+			path = MainViewModel;
+			sourceTree = "<group>";
+		};
 		C46B88232A5C70F600F3F3DE = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		C46B884E2A5C792500F3F3DE /* ViewsModels */ = {
 			isa = PBXGroup;
 			children = (
+				C444311C2A5D571A00625723 /* MainViewModel */,
 			);
 			path = ViewsModels;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 				C46B88302A5C70F600F3F3DE /* AppDelegate.swift in Sources */,
 				C46B884B2A5C727F00F3F3DE /* MainView.swift in Sources */,
 				C46B88452A5C720900F3F3DE /* MainViewController.swift in Sources */,
+				C444311F2A5D574200625723 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
