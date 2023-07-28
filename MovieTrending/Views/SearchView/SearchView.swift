@@ -1,15 +1,14 @@
 //
-//  MainView.swift
+//  SearchView.swift
 //  MovieTrending
 //
-//  Created by Yaroslav on 10.07.23.
+//  Created by Yaroslav on 12.07.23.
 //
 
 import UIKit
 
-final class MainView: UIView {
+final class SearchView: UIView {
   @IBOutlet weak var contentView: UIView!
-  @IBOutlet weak var tableView: UITableView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)

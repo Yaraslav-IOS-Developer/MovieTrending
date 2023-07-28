@@ -9,6 +9,6 @@ import Foundation
 
 final class MainViewModel {
   func numberRowInSections(in sections: Int) -> Int {
-    return 10
+    return 20
   }
 }
