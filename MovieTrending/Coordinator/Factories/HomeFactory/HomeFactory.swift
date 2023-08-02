@@ -15,7 +15,8 @@ protocol HomeFactoryProtocol {
 
 struct HomeFactoryImp: HomeFactoryProtocol {
   func makeHomeViewController() -> UIViewController {
-    let homeViewController = HomeViewController()
+    let view = HomeView()
+    let homeViewController = HomeViewController(homeView: view)
     homeViewController.title = ItemTabBar.home.title
     return homeViewController
   }
