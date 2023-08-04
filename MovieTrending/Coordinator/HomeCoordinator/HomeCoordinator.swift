@@ -21,6 +21,5 @@ final class HomeCoordinator: CoordinatorProtocol {
     let homeViewController = factory.makeHomeViewController()
     factory.makeTabBarItem(navigation: navigation)
     navigation.pushViewController(homeViewController, animated: true)
-    navigation.navigationBar.isHidden = true
   }
 }

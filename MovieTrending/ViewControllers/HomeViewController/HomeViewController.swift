@@ -11,6 +11,14 @@ final class HomeViewController: UIViewController {
   private var homeView: HomeViewProtocol
   private var headerView: HeroHeaderViewProtocol
 
+  private var sectionTitles = [
+    "Trending Movies",
+    "Popular",
+    "Trending TV",
+    "Upcoming Moves",
+    "Top rated"
+  ]
+
   init(
     homeView: HomeViewProtocol,
     headerView: HeroHeaderViewProtocol
@@ -33,8 +41,46 @@ final class HomeViewController: UIViewController {
     setupUI()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+  super.viewDidAppear(animated)
+    configureNavBar()
+  }
+
   private func setupUI() {
     setupTableView()
+  }
+
+  private func configureNavBar() {
+    var originalImage = UIImage(named: "NetflixLogo")
+    originalImage = originalImage?.withRenderingMode(.alwaysOriginal)
+    let resizedImageSize = CGSize(width: 50, height: 50)
+    UIGraphicsBeginImageContextWithOptions(resizedImageSize, false, 0.0)
+    originalImage?.draw(in: CGRect(origin: .zero, size: resizedImageSize))
+    let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    let finalImage = resizedImage?.withRenderingMode(.alwaysOriginal)
+    navigationItem.leftBarButtonItem = UIBarButtonItem(
+      image: finalImage,
+      style: .done,
+      target: self,
+      action: nil
+    )
+
+    navigationItem.rightBarButtonItems = [
+      UIBarButtonItem(
+        image: UIImage(systemName: "person"),
+        style: .done,
+        target: self,
+        action: nil
+      ),
+      UIBarButtonItem(
+        image: UIImage(systemName: "play.rectangle"),
+        style: .done,
+        target: self,
+        action: nil
+      )
+    ]
+    navigationController?.navigationBar.tintColor = .label
   }
 
   private func setupTableView() {
@@ -55,7 +101,7 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 20
+    return sectionTitles.count
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,8 +120,28 @@ extension HomeViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
      return 40
   }
+
+  func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    guard let header = view as? UITableViewHeaderFooterView else { return }
+    header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+    header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
+    header.textLabel?.tintColor = .white
+    header.textLabel?.text = header.textLabel?.text?.lowercased()
+  }
+
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return sectionTitles[section]
+  }
 }
 
 extension HomeViewController: UITableViewDelegate {
 
+}
+
+extension HomeViewController {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let defaultOffset = view.safeAreaInsets.top
+    let offset = scrollView.contentOffset.y + defaultOffset
+    navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
+  }
 }
