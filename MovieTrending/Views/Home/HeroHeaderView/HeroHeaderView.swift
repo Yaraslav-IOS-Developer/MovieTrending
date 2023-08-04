@@ -91,7 +91,8 @@ final class HeroHeaderView: UIView, HeroHeaderViewProtocol {
     gradientLayer.colors = [
       UIColor.clear.cgColor,
       UIColor.systemBackground.cgColor
-    ]
+      ]
+    gradientLayer.locations = [0.8, 1.0]
 
     gradientLayer.frame = bounds
     heroImageView.layer.addSublayer(gradientLayer)
