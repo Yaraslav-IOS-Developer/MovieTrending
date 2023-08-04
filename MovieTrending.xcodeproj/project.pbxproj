@@ -44,6 +44,8 @@
 		C47CE86B2A5EED1C00E43E63 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CE86A2A5EED1C00E43E63 /* DownloadView.swift */; };
 		C47CE86D2A5EED4100E43E63 /* DownloadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47CE86C2A5EED4100E43E63 /* DownloadView.xib */; };
 		C47CE8702A5EED7900E43E63 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CE86F2A5EED7900E43E63 /* DownloadViewController.swift */; };
+		C499816E2A7CFDEB00DAEA0E /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499816D2A7CFDEB00DAEA0E /* HeroHeaderView.swift */; };
+		C49981702A7CFF4300DAEA0E /* HeroHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499816F2A7CFF4300DAEA0E /* HeroHeaderView.xib */; };
 		C4F5865B2A5EE90C0066BA58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5865A2A5EE90C0066BA58 /* HomeViewController.swift */; };
 		C4F5865E2A5EE9B10066BA58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5865D2A5EE9B10066BA58 /* HomeView.swift */; };
 		C4F586602A5EE9F80066BA58 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F5865F2A5EE9F80066BA58 /* HomeView.xib */; };
@@ -91,6 +93,8 @@
 		C47CE86A2A5EED1C00E43E63 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		C47CE86C2A5EED4100E43E63 /* DownloadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadView.xib; sourceTree = "<group>"; };
 		C47CE86F2A5EED7900E43E63 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
+		C499816D2A7CFDEB00DAEA0E /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
+		C499816F2A7CFF4300DAEA0E /* HeroHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroHeaderView.xib; sourceTree = "<group>"; };
 		C4F5865A2A5EE90C0066BA58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C4F5865D2A5EE9B10066BA58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C4F5865F2A5EE9F80066BA58 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
@@ -212,7 +216,7 @@
 			children = (
 				C42DD7B92A7AF5B500D8A0EC /* Cell */,
 				C46B88532A5C7A1300F3F3DE /* LaunchScreen */,
-				C4F5865C2A5EE98C0066BA58 /* HomeView */,
+				C499816B2A7CFDA800DAEA0E /* Home */,
 				C4F586612A5EEA7A0066BA58 /* UpcomingView */,
 				C47CE8612A5EEBC500E43E63 /* SearchView */,
 				C47CE8692A5EECEC00E43E63 /* DownloadView */,
@@ -501,6 +505,24 @@
 			path = DownloadViewController;
 			sourceTree = "<group>";
 		};
+		C499816B2A7CFDA800DAEA0E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C499816C2A7CFDB300DAEA0E /* HeroHeaderView */,
+				C4F5865C2A5EE98C0066BA58 /* HomeView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C499816C2A7CFDB300DAEA0E /* HeroHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C499816D2A7CFDEB00DAEA0E /* HeroHeaderView.swift */,
+				C499816F2A7CFF4300DAEA0E /* HeroHeaderView.xib */,
+			);
+			path = HeroHeaderView;
+			sourceTree = "<group>";
+		};
 		C4F586592A5EE8D50066BA58 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +612,7 @@
 				C4F586652A5EEAC10066BA58 /* UpcomingView.xib in Resources */,
 				C47CE8652A5EEC2200E43E63 /* SearchView.xib in Resources */,
 				C4F586602A5EE9F80066BA58 /* HomeView.xib in Resources */,
+				C49981702A7CFF4300DAEA0E /* HeroHeaderView.xib in Resources */,
 				C46B883C2A5C70F800F3F3DE /* LaunchScreen.storyboard in Resources */,
 				C46B88392A5C70F800F3F3DE /* Assets.xcassets in Resources */,
 			);
@@ -615,6 +638,7 @@
 				C46D17982A7438C7008E6077 /* HomeFactory.swift in Sources */,
 				C47CE8632A5EEBE200E43E63 /* SearchView.swift in Sources */,
 				C46D178D2A742E05008E6077 /* AppFactory.swift in Sources */,
+				C499816E2A7CFDEB00DAEA0E /* HeroHeaderView.swift in Sources */,
 				C4F586632A5EEA990066BA58 /* UpcomingView.swift in Sources */,
 				C46D17AD2A7450D0008E6077 /* DownloadCoordinator.swift in Sources */,
 				C4F5865B2A5EE90C0066BA58 /* HomeViewController.swift in Sources */,

@@ -9,9 +9,14 @@ import UIKit
 
 final class HomeViewController: UIViewController {
   private var homeView: HomeViewProtocol
+  private var headerView: HeroHeaderViewProtocol
 
-  init(homeView: HomeViewProtocol) {
+  init(
+    homeView: HomeViewProtocol,
+    headerView: HeroHeaderViewProtocol
+  ) {
     self.homeView = homeView
+    self.headerView = headerView
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -44,7 +49,7 @@ final class HomeViewController: UIViewController {
   }
 
   private func createHeaderView() {
-    homeView.tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+    homeView.tableView.tableHeaderView = headerView as? UIView
   }
 }
 
@@ -67,7 +72,7 @@ extension HomeViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    40
+     return 40
   }
 }
 

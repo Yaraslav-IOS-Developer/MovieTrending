@@ -17,16 +17,16 @@ final class HomeTableViewCell: UITableViewCell, HomeTableViewCellProtocol {
 
   override func awakeFromNib() {
     super.awakeFromNib()
-
+    setupUI()
   }
 
   override func layoutSubviews() {
     super.layoutSubviews()
-    setupUI()
+    setupCollectionViewFlowLayout()
   }
 
   private func setupUI() {
-    setupCollectionViewFlowLayout()
+
   }
 
   private func setupCollectionViewFlowLayout() {
@@ -47,6 +47,7 @@ final class HomeTableViewCell: UITableViewCell, HomeTableViewCellProtocol {
   private func registerCell() {
     collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
   }
+
 }
 
 extension HomeTableViewCell: UICollectionViewDataSource {
