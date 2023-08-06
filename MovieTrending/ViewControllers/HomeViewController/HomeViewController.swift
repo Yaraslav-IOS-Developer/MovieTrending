@@ -13,8 +13,8 @@ final class HomeViewController: UIViewController {
 
   private var sectionTitles = [
     "Trending Movies",
-    "Popular",
     "Trending TV",
+    "Popular",
     "Upcoming Moves",
     "Top rated"
   ]
@@ -126,7 +126,7 @@ extension HomeViewController: UITableViewDataSource {
     header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
     header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
     header.textLabel?.tintColor = .white
-    header.textLabel?.text = header.textLabel?.text?.lowercased()
+    header.textLabel?.text = header.textLabel?.text?.lowercased().capitalizedFirst()
   }
 
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
