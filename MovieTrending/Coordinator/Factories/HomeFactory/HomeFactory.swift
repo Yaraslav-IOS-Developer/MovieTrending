@@ -15,8 +15,10 @@ protocol HomeFactoryProtocol {
 
 struct HomeFactoryImp: HomeFactoryProtocol {
   func makeHomeViewController() -> UIViewController {
-    let homeViewController = HomeViewController()
-    homeViewController.title = ItemTabBar.home.title
+    let view = HomeView()
+    let headerView = HeroHeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+    let homeViewController = HomeViewController(homeView: view, headerView: headerView)
+    homeViewController.navigationController?.setNavigationBarHidden(true, animated: true)
     return homeViewController
   }
 

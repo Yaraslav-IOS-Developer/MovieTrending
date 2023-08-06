@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject {
+  var contentView: UIView! { get }
+  var tableView: UITableView! { get }
+}
 
-final class HomeView: UIView {
+final class HomeView: UIView, HomeViewProtocol {
   @IBOutlet weak var contentView: UIView!
+  @IBOutlet weak var tableView: UITableView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)

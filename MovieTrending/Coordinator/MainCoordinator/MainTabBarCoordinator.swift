@@ -27,5 +27,6 @@ final class MainTabBarCoordinator: CoordinatorProtocol {
     let childNavigation = childCoordinators.map { $0.navigation.rootViewController }
     childCoordinators.forEach { $0.start() }
     navigationTabBar.viewControllers = childNavigation
+    navigationTabBar.tabBar.tintColor = .label
   }
 }
