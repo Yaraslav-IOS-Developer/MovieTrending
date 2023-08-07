@@ -51,6 +51,9 @@
 		C49981732A7D3B1C00DAEA0E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49981722A7D3B1C00DAEA0E /* AppConstants.swift */; };
 		C4D27FA42A7FA682001DAADE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA32A7FA682001DAADE /* String+Extensions.swift */; };
 		C4D27FA62A7FAA09001DAADE /* TrendingTv.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA52A7FAA09001DAADE /* TrendingTv.swift */; };
+		C4D27FA82A81806B001DAADE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA72A81806B001DAADE /* Route.swift */; };
+		C4D27FAA2A818158001DAADE /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA92A818158001DAADE /* Method.swift */; };
+		C4D27FAC2A8181AD001DAADE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FAB2A8181AD001DAADE /* AppError.swift */; };
 		C4F5865B2A5EE90C0066BA58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5865A2A5EE90C0066BA58 /* HomeViewController.swift */; };
 		C4F5865E2A5EE9B10066BA58 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5865D2A5EE9B10066BA58 /* HomeView.swift */; };
 		C4F586602A5EE9F80066BA58 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F5865F2A5EE9F80066BA58 /* HomeView.xib */; };
@@ -105,6 +108,9 @@
 		C49981722A7D3B1C00DAEA0E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		C4D27FA32A7FA682001DAADE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C4D27FA52A7FAA09001DAADE /* TrendingTv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTv.swift; sourceTree = "<group>"; };
+		C4D27FA72A81806B001DAADE /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		C4D27FA92A818158001DAADE /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		C4D27FAB2A8181AD001DAADE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		C4F5865A2A5EE90C0066BA58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C4F5865D2A5EE9B10066BA58 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C4F5865F2A5EE9F80066BA58 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
@@ -287,6 +293,9 @@
 			isa = PBXGroup;
 			children = (
 				C487F9D42A7E4C8000D8CD04 /* BaseNetworkService.swift */,
+				C4D27FA72A81806B001DAADE /* Route.swift */,
+				C4D27FA92A818158001DAADE /* Method.swift */,
+				C4D27FAB2A8181AD001DAADE /* AppError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -672,6 +681,7 @@
 				C47CE8682A5EEC5C00E43E63 /* SearchViewController.swift in Sources */,
 				C46D17A22A74431B008E6077 /* ComingSoonCoordinator.swift in Sources */,
 				C46D17A72A744E93008E6077 /* SearchCoordinator.swift in Sources */,
+				C4D27FAC2A8181AD001DAADE /* AppError.swift in Sources */,
 				C487F9D72A7E4FCA00D8CD04 /* Movie.swift in Sources */,
 				C47CE8602A5EEB4C00E43E63 /* UpcomingViewController.swift in Sources */,
 				C46D17732A73D84B008E6077 /* CoordinatorProtocol.swift in Sources */,
@@ -685,6 +695,7 @@
 				C46D17AD2A7450D0008E6077 /* DownloadCoordinator.swift in Sources */,
 				C4F5865B2A5EE90C0066BA58 /* HomeViewController.swift in Sources */,
 				C4D27FA42A7FA682001DAADE /* String+Extensions.swift in Sources */,
+				C4D27FAA2A818158001DAADE /* Method.swift in Sources */,
 				C46D17902A742EC5008E6077 /* MainTabBarCoordinator.swift in Sources */,
 				C46B88302A5C70F600F3F3DE /* AppDelegate.swift in Sources */,
 				C42DD7B82A7AF05400D8A0EC /* UITableView+Extensions.swift in Sources */,
@@ -697,6 +708,7 @@
 				C46D17AA2A744EE9008E6077 /* SearchFactory.swift in Sources */,
 				C46D17962A743846008E6077 /* HomeCoordinator.swift in Sources */,
 				C46D177B2A73D927008E6077 /* NavigationImp.swift in Sources */,
+				C4D27FA82A81806B001DAADE /* Route.swift in Sources */,
 				C46D17892A73DCD7008E6077 /* AppCoordinator.swift in Sources */,
 				C444311F2A5D574200625723 /* MainViewModel.swift in Sources */,
 				C42DD7C12A7AFB7300D8A0EC /* UICollectionView.swift in Sources */,

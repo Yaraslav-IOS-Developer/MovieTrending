@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct TrendingMoviesResponse: Decodable {
-  let results: [Movie]
+struct TrendingMoviesResponse<T: Decodable>: Decodable {
+  let results: T?
 }
 
 struct Movie: Decodable {

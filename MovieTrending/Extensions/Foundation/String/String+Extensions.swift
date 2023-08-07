@@ -16,3 +16,9 @@ extension String {
     return String(firstChar).uppercased() + dropFirst()
   }
 }
+
+extension String {
+  var asUrl: URL? {
+    return URL(string: self)
+  }
+}
