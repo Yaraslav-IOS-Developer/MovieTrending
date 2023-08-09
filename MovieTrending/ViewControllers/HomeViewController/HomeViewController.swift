@@ -7,6 +7,15 @@
 
 import UIKit
 
+
+enum Sections: Int, CaseIterable {
+  case TrendingMovies = 0
+  case TrendingTV = 1
+  case Popular = 2
+  case UpcomingMoves = 3
+  case TopRated = 4
+}
+
 final class HomeViewController: UIViewController {
   private var homeView: HomeViewProtocol
   private var headerView: HeroHeaderViewProtocol
@@ -16,7 +25,7 @@ final class HomeViewController: UIViewController {
     "Trending TV",
     "Popular",
     "Upcoming Moves",
-    "Top rated"
+    "Top Rated"
   ]
 
   init(
@@ -110,6 +119,26 @@ extension HomeViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableNibCell(of: HomeTableViewCell.self, forIndexPath: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
+
+    switch indexPath.section {
+      case Sections.TrendingMovies.rawValue:
+        cell.configure(with: [])
+
+      case Sections.TrendingTV.rawValue:
+        cell.configure(with: [])
+
+      case Sections.Popular.rawValue:
+        cell.configure(with: [])
+
+      case Sections.UpcomingMoves.rawValue:
+        cell.configure(with: [])
+
+      case Sections.TopRated.rawValue:
+        cell.configure(with: [])
+
+      default:
+        break
+    }
     return cell
   }
 
