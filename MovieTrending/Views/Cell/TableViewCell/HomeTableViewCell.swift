@@ -34,6 +34,7 @@ final class HomeTableViewCell: UITableViewCell, HomeTableViewCellProtocol {
   private func setupCollectionViewFlowLayout() {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
+    layout.collectionView?.showsHorizontalScrollIndicator = false
     layout.itemSize = CGSize(width: 140, height: collectionView.bounds.height)
     collectionView.collectionViewLayout = layout
     setupCollectionView()
@@ -43,7 +44,6 @@ final class HomeTableViewCell: UITableViewCell, HomeTableViewCellProtocol {
     registerCell()
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.backgroundColor = .red
   }
 
   private func registerCell() {
