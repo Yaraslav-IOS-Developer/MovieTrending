@@ -123,8 +123,8 @@ extension HomeViewController: UITableViewDataSource {
     switch indexPath.section {
       case Sections.TrendingMovies.rawValue:
         MoviesNetwork.shared.fetchTrendingMovies { result in
+
           switch result {
-              
             case .success(let movies):
               cell.configure(with: movies)
             case .failure(let error):
@@ -134,10 +134,10 @@ extension HomeViewController: UITableViewDataSource {
 
       case Sections.TrendingTV.rawValue:
         MoviesNetwork.shared.fetchTrendingTV { result in
+
           switch result {
             case .success(let movies):
               cell.configure(with: movies)
-              
             case .failure(let error):
               print(error)
           }
@@ -145,10 +145,10 @@ extension HomeViewController: UITableViewDataSource {
 
       case Sections.Popular.rawValue:
         MoviesNetwork.shared.fetchPopular { result in
+
           switch result {
             case .success(let movies):
               cell.configure(with: movies)
-
             case .failure(let error):
               print(error)
           }
@@ -156,10 +156,10 @@ extension HomeViewController: UITableViewDataSource {
 
       case Sections.UpcomingMoves.rawValue:
         MoviesNetwork.shared.fetchUpcomingMoves { result in
+
           switch result {
             case .success(let movies):
               cell.configure(with: movies)
-
             case .failure(let error):
               print(error)
           }
@@ -167,10 +167,10 @@ extension HomeViewController: UITableViewDataSource {
 
       case Sections.TopRated.rawValue:
         MoviesNetwork.shared.fetchTopRated { result in
+
           switch result {
             case .success(let movies):
               cell.configure(with: movies)
-
             case .failure(let error):
               print(error)
           }
