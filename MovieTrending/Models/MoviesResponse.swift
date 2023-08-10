@@ -1,18 +1,18 @@
 //
-//  TrendingTv.swift
+//  MoviesResponse.swift
 //  MovieTrending
 //
-//  Created by Yaroslav on 6.08.23.
+//  Created by Yaroslav on 5.08.23.
 //
 
 import Foundation
 
 
-struct TrendingTv: Codable {
-  var results: [Tv]
+struct MoviesResponse<T: Decodable>: Decodable {
+  let results: T?
 }
 
-struct Tv: Codable {
+struct Movie: Decodable {
   let id: Int
   let media_type: String?
   let original_name: String?
