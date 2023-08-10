@@ -9,7 +9,7 @@ import Foundation
 
 
 enum Route {
-  static let baseUrl = "https://api.themoviedb.org"
+  static let baseUrl = ""
 
   case trendingMoves
   case trendingTV
@@ -20,19 +20,18 @@ enum Route {
   var description: String {
     switch self {
       case .trendingMoves:
-        return "/3/trending/movie/day?language=en-US"
+        return ""
 
       case .trendingTV:
-        return "/3/trending/tv/day?language=en-US"
+        return ""
 
       case .popular:
-        return "/3/movie/popular?language=en-US&page=1"
+        return ""
 
       case .upcomingMoves:
-        return "/3/movie/upcoming?language=en-US&page=1"
-        
+        return ""
       case .topRated:
-        return "/3/movie/top_rated?language=en-US&page=1"
+        return ""
     }
   }
 }

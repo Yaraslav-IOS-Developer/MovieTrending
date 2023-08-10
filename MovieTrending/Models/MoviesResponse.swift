@@ -8,11 +8,11 @@
 import Foundation
 
 
-struct MoviesResponse<T: Codable>: Codable {
+struct MoviesResponse<T: Decodable>: Decodable {
   let results: T?
 }
 
-struct Movie: Codable {
+struct Movie: Decodable {
   let id: Int
   let media_type: String?
   let original_name: String?

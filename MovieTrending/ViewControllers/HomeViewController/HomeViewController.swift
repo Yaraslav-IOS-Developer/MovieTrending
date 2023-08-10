@@ -122,59 +122,19 @@ extension HomeViewController: UITableViewDataSource {
 
     switch indexPath.section {
       case Sections.TrendingMovies.rawValue:
-        MoviesNetwork.shared.fetchTrendingMovies { result in
-
-          switch result {
-            case .success(let movies):
-              cell.configure(with: movies)
-            case .failure(let error):
-              print(error)
-          }
-        }
+        cell.configure(with: [])
 
       case Sections.TrendingTV.rawValue:
-        MoviesNetwork.shared.fetchTrendingTV { result in
-
-          switch result {
-            case .success(let movies):
-              cell.configure(with: movies)
-            case .failure(let error):
-              print(error)
-          }
-        }
+        cell.configure(with: [])
 
       case Sections.Popular.rawValue:
-        MoviesNetwork.shared.fetchPopular { result in
-
-          switch result {
-            case .success(let movies):
-              cell.configure(with: movies)
-            case .failure(let error):
-              print(error)
-          }
-        }
+        cell.configure(with: [])
 
       case Sections.UpcomingMoves.rawValue:
-        MoviesNetwork.shared.fetchUpcomingMoves { result in
-
-          switch result {
-            case .success(let movies):
-              cell.configure(with: movies)
-            case .failure(let error):
-              print(error)
-          }
-        }
+        cell.configure(with: [])
 
       case Sections.TopRated.rawValue:
-        MoviesNetwork.shared.fetchTopRated { result in
-
-          switch result {
-            case .success(let movies):
-              cell.configure(with: movies)
-            case .failure(let error):
-              print(error)
-          }
-        }
+        cell.configure(with: [])
 
       default:
         break

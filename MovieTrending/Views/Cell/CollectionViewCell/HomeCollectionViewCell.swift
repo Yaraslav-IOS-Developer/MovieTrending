@@ -16,7 +16,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
     }
 
   func configure(with model: String) {
-    guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(model)") else { return }
+    guard let url = URL(string: model) else { return }
     posterImageView.sd_setImage(with: url)
   }
 }
