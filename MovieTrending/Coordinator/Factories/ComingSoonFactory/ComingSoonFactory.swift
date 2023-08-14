@@ -24,7 +24,8 @@ struct ComingSoonFactoryImp: ComingSoonFactoryProtocol {
   }
 
   func makeComingSoonViewController() -> UIViewController {
-    let comingSoonViewController = UpcomingViewController()
+    let view = UpcomingView()
+    let comingSoonViewController = UpcomingViewController(upcomingView: view)
     comingSoonViewController.title = ItemTabBar.comingSoon.title
     return comingSoonViewController
   }
