@@ -30,6 +30,7 @@ final class UpcomingViewController: UIViewController {
   }
 
   private func setupUI() {
+    fetchUpcoming()
     setupTableView()
   }
 
@@ -40,7 +41,7 @@ final class UpcomingViewController: UIViewController {
   }
 
   private func registerCell() {
-    upcomingView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    upcomingView.tableView.registerNibCell(ofType: UpcomingTableViewCell.self)
   }
 
   private func fetchUpcoming() {
@@ -65,9 +66,15 @@ extension UpcomingViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = movies[indexPath.row].original_name
-    return cell 
+    guard let cell = tableView.dequeueReusableNibCell(of: UpcomingTableViewCell.self, forIndexPath: indexPath) as? UpcomingTableViewCell else {
+      return UITableViewCell()
+    }
+    cell.configure(with: movies[indexPath.row])
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 120
   }
 }
 

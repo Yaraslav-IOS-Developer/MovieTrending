@@ -53,6 +53,8 @@
 		C499816E2A7CFDEB00DAEA0E /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499816D2A7CFDEB00DAEA0E /* HeroHeaderView.swift */; };
 		C49981702A7CFF4300DAEA0E /* HeroHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499816F2A7CFF4300DAEA0E /* HeroHeaderView.xib */; };
 		C49981732A7D3B1C00DAEA0E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49981722A7D3B1C00DAEA0E /* AppConstants.swift */; };
+		C4BB7DA32A8A45C700500FB8 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB7DA12A8A45C700500FB8 /* UpcomingTableViewCell.swift */; };
+		C4BB7DA42A8A45C700500FB8 /* UpcomingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4BB7DA22A8A45C700500FB8 /* UpcomingTableViewCell.xib */; };
 		C4D27FA42A7FA682001DAADE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA32A7FA682001DAADE /* String+Extensions.swift */; };
 		C4D27FA82A81806B001DAADE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA72A81806B001DAADE /* Route.swift */; };
 		C4D27FAA2A818158001DAADE /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D27FA92A818158001DAADE /* Method.swift */; };
@@ -112,6 +114,8 @@
 		C499816D2A7CFDEB00DAEA0E /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
 		C499816F2A7CFF4300DAEA0E /* HeroHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroHeaderView.xib; sourceTree = "<group>"; };
 		C49981722A7D3B1C00DAEA0E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		C4BB7DA12A8A45C700500FB8 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
+		C4BB7DA22A8A45C700500FB8 /* UpcomingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingTableViewCell.xib; sourceTree = "<group>"; };
 		C4D27FA32A7FA682001DAADE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C4D27FA72A81806B001DAADE /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		C4D27FA92A818158001DAADE /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
@@ -174,8 +178,8 @@
 		C42DD7BA2A7AF5CF00D8A0EC /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				C42DD7BC2A7AF64B00D8A0EC /* HomeTableViewCell.swift */,
-				C42DD7BD2A7AF64B00D8A0EC /* HomeTableViewCell.xib */,
+				C4BB7D9F2A8A456300500FB8 /* HomeTableViewCell */,
+				C4BB7DA02A8A458300500FB8 /* UpcomingTableViewCell */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -565,6 +569,24 @@
 			path = AppConstants;
 			sourceTree = "<group>";
 		};
+		C4BB7D9F2A8A456300500FB8 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C42DD7BC2A7AF64B00D8A0EC /* HomeTableViewCell.swift */,
+				C42DD7BD2A7AF64B00D8A0EC /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
+			sourceTree = "<group>";
+		};
+		C4BB7DA02A8A458300500FB8 /* UpcomingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C4BB7DA12A8A45C700500FB8 /* UpcomingTableViewCell.swift */,
+				C4BB7DA22A8A45C700500FB8 /* UpcomingTableViewCell.xib */,
+			);
+			path = UpcomingTableViewCell;
+			sourceTree = "<group>";
+		};
 		C4D27FA12A7FA63D001DAADE /* UICollectionVIew */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +697,7 @@
 				C47CE86D2A5EED4100E43E63 /* DownloadView.xib in Resources */,
 				C42DD7BF2A7AF64B00D8A0EC /* HomeTableViewCell.xib in Resources */,
 				C4F586652A5EEAC10066BA58 /* UpcomingView.xib in Resources */,
+				C4BB7DA42A8A45C700500FB8 /* UpcomingTableViewCell.xib in Resources */,
 				C47CE8652A5EEC2200E43E63 /* SearchView.xib in Resources */,
 				C4808D312A83F03F00BF441B /* HomeCollectionViewCell.xib in Resources */,
 				C4F586602A5EE9F80066BA58 /* HomeView.xib in Resources */,
@@ -704,6 +727,7 @@
 				C47CE8602A5EEB4C00E43E63 /* UpcomingViewController.swift in Sources */,
 				C46D17732A73D84B008E6077 /* CoordinatorProtocol.swift in Sources */,
 				C46D17982A7438C7008E6077 /* HomeFactory.swift in Sources */,
+				C4BB7DA32A8A45C700500FB8 /* UpcomingTableViewCell.swift in Sources */,
 				C4F112322A850EDF00F246B7 /* MoviesNetwork.swift in Sources */,
 				C47CE8632A5EEBE200E43E63 /* SearchView.swift in Sources */,
 				C46D178D2A742E05008E6077 /* AppFactory.swift in Sources */,
