@@ -45,7 +45,7 @@ class BaseNetworkService {
     switch result {
       case .success(let data):
         let decoder = JSONDecoder()
-        guard let response = try? decoder.decode(TrendingMoviesResponse<T>.self, from: data) else {
+        guard let response = try? decoder.decode(MoviesResponse<T>.self, from: data) else {
           completion(.failure(AppError.errorDescription))
           return
         }
@@ -66,7 +66,7 @@ class BaseNetworkService {
     let urlString = Route.baseUrl + route.description
     guard let url = urlString.asUrl else { return nil }
     var urlRequest = URLRequest(url: url)
-    urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    urlRequest.addValue("application/json", forHTTPHeaderField: "accept")
     urlRequest.httpMethod = method.rawValue
 
     if let params = parameters {
