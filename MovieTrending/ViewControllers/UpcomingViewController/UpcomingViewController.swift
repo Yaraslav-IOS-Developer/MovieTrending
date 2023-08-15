@@ -8,7 +8,7 @@
 import UIKit
 
 final class UpcomingViewController: UIViewController {
-  private var upcomingView: UpcomingViewProtocol
+  private let upcomingView: UpcomingViewProtocol
   private var movies: [Movie] = []
 
   init(upcomingView: UpcomingViewProtocol) {
@@ -33,7 +33,7 @@ final class UpcomingViewController: UIViewController {
     fetchUpcoming()
     setupTableView()
   }
-
+  
   private func setupTableView() {
     registerCell()
     upcomingView.tableView.delegate = self
