@@ -1,19 +1,21 @@
 //
-//  SearchView.swift
+//  SearchResultView.swift
 //  MovieTrending
 //
-//  Created by Yaroslav on 12.07.23.
+//  Created by Yaroslav on 15.08.23.
 //
 
 import UIKit
 
 
-protocol SearchViewProtocol: AnyObject {
-  var contentView: UIView! { get }
+protocol SearchResultViewProtocol: AnyObject {
+  var contentView: UIView! { get set }
+  var collectionView: UICollectionView! { get set }
 }
 
-final class SearchView: UIView, SearchViewProtocol {
+final class SearchResultView: UIView, SearchResultViewProtocol {
   @IBOutlet weak var contentView: UIView!
+  @IBOutlet weak var collectionView: UICollectionView!
 
   override init(frame: CGRect) {
     super.init(frame: frame)

@@ -39,5 +39,11 @@ final class MoviesNetwork: BaseNetworkService {
     let params = ["api_key": "13152e0664ad4a29df9c3a3198ac45f3"]
     request(route: .topRated, method: .get, parameters: params, completion: completion)
   }
+
+  func search(with query: String, completion: @escaping(Result<[Movie], Error>) -> Void) {
+    guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return } 
+    let params = ["api_key": "13152e0664ad4a29df9c3a3198ac45f3"]
+    request(route: .search(query), method: .get, completion: completion)
+  }
 }
 

@@ -17,8 +17,8 @@ enum Sections: Int, CaseIterable {
 }
 
 final class HomeViewController: UIViewController {
-  private var homeView: HomeViewProtocol
-  private var headerView: HeroHeaderViewProtocol
+  private let homeView: HomeViewProtocol
+  private let headerView: HeroHeaderViewProtocol
 
   private var sectionTitles = [
     "Trending Movies",

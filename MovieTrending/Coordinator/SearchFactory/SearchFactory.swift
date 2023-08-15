@@ -24,7 +24,10 @@ struct SearchFactoryImp: SearchFactoryPortocol {
   }
 
   func makeSearchFactoryViewController() -> UIViewController {
-    let searchViewController = SearchViewController()
+    let searchView = SearchView()
+    let searchResultView = SearchResultView()
+    let resultSearchViewController = UISearchController(searchResultsController: SearchResultViewController(searchResultView: searchResultView))
+    let searchViewController = SearchViewController(searchView: searchView, searchViewController: resultSearchViewController)
     searchViewController.title = ItemTabBar.search.title
     return searchViewController
   }

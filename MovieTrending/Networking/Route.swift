@@ -16,6 +16,7 @@ enum Route {
   case popular
   case upcomingMoves
   case topRated
+  case search(String)
 
   var description: String {
     switch self {
@@ -33,6 +34,9 @@ enum Route {
         
       case .topRated:
         return "/3/movie/top_rated?language=en-US&page=1"
+
+      case .search(let query):
+        return "/3/search/movie?query=\(query)&api_key=\(AppConstants.Keys.API)"
     }
   }
 }
